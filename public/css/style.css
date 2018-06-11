@@ -1,0 +1,118 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.user-name{
+	font-size: 18px;
+	margin: 0;
+	margin-right: 20px;
+	color: #eee;
+}
+.alert{
+	margin-bottom: 5px;
+}
+.alert:last-child{
+	margin: 0;
+}
+.alert-error{
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.alert-success_msg{
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.messages{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 350px;
+	padding: 15px 20px;
+	background: #eee;
+	border-radius: 10px;
+}
+input {
+	max-width: 400px;
+}
+.error-404 {
+	display: block;
+	text-align: center;
+	font-size: 200px;
+	color: #ccc;
+}
+.description-404{
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	color: #ccc;
+}
+h2 {
+	font-size: 18px;
+	padding: 10px 20px;
+	color: #575ed8;
+}
+#mario-chat {
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+	border: 1px solid #ddd;
+	box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+	border-radius: 2px;
+}
+#chat-window {
+	height: 250px;
+	overflow: auto;
+	background: #f9f9f9;
+}
+
+#output p {
+	padding: 14px 0px;
+	margin: 0 20px;
+	border-bottom: 1px solid #e9e9e9;
+	color: #555;
+}
+
+#feedback p {
+	color: #aaa;
+	padding: 14px 0;
+	margin: 0 20px;
+}
+
+#output strong {
+	color: #575ed8;
+}
+
+.chat-input {
+	max-width: none;
+	padding: 10px 20px;
+	border: 0;
+	display: block;
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
+}
+.chat-input.disabled{
+	display: none;
+	background: #f3f3f3;
+	border: 1px solid #d4d3d3;
+}
+
+button {
+	background: #575ed8;
+	color: #fff;
+	font-size: 18px;
+	border: 0;
+	padding: 12px 0;
+	width: 100%;
+	border-radius: 0 0 2px 2px;
+}
+.chat-title{
+	text-align: center;
+	color: #565454;
+}
+

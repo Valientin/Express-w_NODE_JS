@@ -1,0 +1,52 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		if title
+			title #{title}
+		else
+			title EXPRESS
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		link(rel="stylesheet" href="/bower_component/bootstrap/dist/css/bootstrap.css")
+		link(rel="stylesheet" href="/css/style.css")
+	body
+		nav.navbar.navbar-expand.navbar-dark.bg-dark
+			a.navbar-brand(href='/') EXPRESS
+			#navbarsExample02.collapse.navbar-collapse.d-flex.justify-content-between
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link(href='/')
+							| Home
+					li.nav-item
+							a.nav-link(href='/chat') Chat
+					if user
+						li.nav-item
+							a.nav-link(href='/articles/add') Add article
+				ul.navbar-nav.d-flex.align-items-center
+					if user
+						li.nav-item
+							h4.user-name Hello #{user.username}!
+						li.nav-item
+							a.nav-link(href='/users/logout') Logout
+					else
+						li.nav-item
+							a.nav-link(href='/users/login') Login
+						li.nav-item
+							a.nav-link(href='/users/register') Register
+
+		.container
+			br
+			!= messages('message', locals)
+			if errors
+				.messages
+					each error, i in errors
+						div(class="alert alert-danger") #{error.msg}
+			block content
+			br
+			hr
+			footer
+				p Copyright &copy; 2018
+		block scripts
+		script(src='/bower_component/jquery/dist/jquery.js')
+		script(src='/js/main.js')
+		script(src='/bower_component/bootstrap/dist/js/bootstrap.js')

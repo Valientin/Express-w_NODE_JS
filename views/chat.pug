@@ -1,0 +1,17 @@
+extends layout/main
+
+block content
+	h1.chat-title Wellcome to my chat!
+	#mario-chat
+		#chat-window
+			#output
+			#feedback
+		if user
+			input(class="chat-input disabled" id="handle" type="text" value=`${user.username}` disabled)
+		else
+			input(class="chat-input" id="handle" type="text" placeholder="Handle")
+		input(class="chat-input" id="message" type="text" placeholder="Message")
+		button(id="send") Send
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js")
+	script(src="/js/chat.js")
